@@ -1,0 +1,325 @@
+/* style.css */
+.hamburger {
+  display: none;
+}
+
+/* Phần responsive cho hamburger và thanh nav */
+@media only screen and (max-width: 900px) {
+  /* Hiển thị hamburger khi màn hình nhỏ hơn 900px */
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      padding-left: 20px;
+      z-index: 800; /* Đảm bảo hamburger hiển thị trên cùng */
+      position: absolute;
+      top: 20px;
+      left: 20px; /* Đặt vị trí bên trái của hình ảnh */
+  }
+  .navigation img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của parent */
+    height: auto; /* Duy trì tỷ lệ khung hình */
+}
+
+  .menu{
+    font-size: small;
+  }
+  /* Ẩn thanh nav khi màn hình nhỏ hơn 900px */
+  .nav {
+      display: none;
+  }
+
+  /* Hiển thị thanh nav khi hamburger được nhấn */
+  .nav.active {
+      display: block;
+      position: absolute;
+      top: 50px; /* Thay đổi vị trí tùy thuộc vào cần thiết */
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #7c2d12;
+      transition: 0.2s;
+      overflow: hidden;
+      z-index: 998; /* Đảm bảo thanh nav hiển thị dưới hamburger */
+  }
+
+  /* Các quy tắc CSS cho các mục trong thanh nav */
+  .nav ul {
+      display: block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+  }
+
+  /* Hiển thị các mục trong thanh nav khi được kích hoạt */
+  .nav.active ul {
+      opacity: 1;
+  }
+
+  .nav ul li a {
+      margin-bottom: 12px;
+      color: aliceblue;
+  }
+  .chung{
+    text-align: center;
+  }
+}
+
+
+
+
+/* CSS cho các đường line trong hamburger */
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background: #7c2d12;
+  margin: 6px 0;
+}
+
+/* Đảm bảo thanh nav hiển thị đúng vị trí trên cùng khi màn hình lớn hơn 900px */
+.nav {
+  display: block;
+  position: static;
+  width: auto;
+  background: none;
+  overflow: visible;
+}
+
+
+
+.dark{
+  color: #fff;
+  background-color: #333;
+}
+.dark a{
+  color: #fff;
+}
+.dark ul{
+  background-color: #333;
+}
+
+
+.bentrai{
+  font-size: large;
+}
+.square-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Tạo khoảng cách giữa các cột */
+  }
+  
+  .square {
+    width: 210px;
+    height: 200px;
+    background-color: #706d6d; /* Tùy chọn: Thêm màu nền để thấy ô vuông */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .square img {
+    max-width: 80%; /* Tùy chỉnh kích thước hình ảnh lớn hơn */
+    max-height: 80%; /* Tùy chỉnh kích thước hình ảnh lớn hơn */
+    margin-bottom: 5px;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold; /* Đậm */
+    color: white; /* Màu trắng */
+  }
+  
+  .link {
+    text-align: center;
+    font-size: 16px;
+    color: orange!important;
+    text-decoration: none; /* Bỏ gạch chân liên kết */
+    margin-top: 2px;
+  }
+   
+
+
+/* Thiết lập main content để lấp đầy toàn bộ màn hình */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+    
+    padding: 20px;
+}
+
+/* Thiết lập footer */
+footer {
+   
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.column-wrapper {
+    display: flex; /* Sử dụng Flexbox để chia thành hai cột */
+    justify-content: space-between; /* Căn các cột từng bên */
+    text-align: left;
+}
+
+.column {
+    flex: 1; /* Để cả hai cột bằng nhau */
+    padding: 20px; /* Khoảng cách bên trong cột */
+   
+  
+    margin: 10px; /* Khoảng cách giữa các cột */
+}
+.row {
+    display: flex;
+    border: #fff;
+}
+
+.column1 {
+    flex: 1;
+    padding: 20px;
+   
+   
+    margin: 10px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.column1 img {
+    max-width: 100%;
+}
+
+    aside {
+    border-top: 0px solid #26A69A;
+    border-bottom: 0px solid #00695C;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    height: 250px;
+    width: 250px;
+    background: url(http://farm5.staticflickr.com/4180/34813900975_be65f5a553_o.jpg);
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: 0 0 100px 10px #fff;
+    transition: all ease 0.3s;
+    }
+    
+    aside:hover {
+    border-top: 4px solid #26A69A;
+    border-bottom: 4px solid #00695C;
+    border-radius: 5px;
+    height: 480px;
+    width: 350px;
+    box-shadow: 0 0 70px 10px #fff;
+    }
+    
+    aside:hover header img {
+    animation: profile_image 2000ms linear both;
+    animation-delay: 0.5s;
+    }
+    
+    header {
+    text-align: center;
+    }
+    
+    header h1 {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+    line-height: 25px;
+    display: inline-block;
+    padding: 10px;
+    transition: all ease 0.250s;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    }
+    
+    aside:hover header h1 {
+    margin-top: 0px;
+    outline: 0 solid #fff;
+    border-top: 0px solid #fff;
+    border-bottom: 1px solid #fff;
+    }
+    
+    header h2 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 0px;
+    margin: 0;
+    }
+    
+    .profile-bio {
+    margin-top: 20px;
+    padding: 1px 20px 10px 20px !important;
+    transition: all linear 1.5s;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.42) 49%, rgba(0, 0, 0, 0.61) 100%);
+    }
+    
+    aside:hover .profile-bio {
+    opacity: 1;
+    }
+    
+    .profile-bio p:first-child {
+    text-align: center;
+    font-size: 16px;
+    }
+    
+    .profile-social-links {
+    position: relative;
+    margin-top: -440px;
+    margin-left: -100px;
+    list-style-type: none;
+    opacity: 0;
+    transition: all ease 0.5s;
+    }
+    
+    aside:hover .profile-social-links {
+    margin-left: -30px;
+    opacity: 1;
+    }
+    
+    .profile-social-links li img {
+    width: 30px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    }
+    /*PROFILE IMAGE ANIMATE */
+    
+    
+    
+    aside:hover ul li:first-child {
+    animation: social_animation 2000ms ease-in-out both;
+    animation-delay: 0.75s;
+    }
+    
+    aside:hover ul li:nth-child(2) {
+    animation: social_animation 2000ms ease-in-out both;
+    animation-delay: 1s;
+    }
+    
+    aside:hover ul li:nth-child(3) {
+    animation: social_animation 2000ms ease-in-out both;
+    animation-delay: 1.25s;
+    }
+
+
+    
+
+    
