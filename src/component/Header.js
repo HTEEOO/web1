@@ -2,7 +2,7 @@
 import Navigation from './Navigation';
 import { useContext } from "react";
 import { ThemeContext } from "../App";
-
+import './style.css';
 const Header = () => {
   const theme = useContext(ThemeContext)
   return (

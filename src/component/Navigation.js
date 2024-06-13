@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../App";
 import { useState } from "react";
 import './style.css';
+import Dashboard from "./Dashboard";
 
 
 const Navigation = () => {
@@ -17,22 +18,15 @@ const Navigation = () => {
     const theme = useContext(ThemeContext)
     return (
 
-        
+
         <div className={theme}>
-           
+
             <nav className={`nav ${isActive ? 'active' : ''}`}>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-                <div className="hamburger" onClick={toggleMenu}>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                    </div>
                 <div className="navigation">
-                    <a href="#">
+                   
                         <img src="/img/logo.png" alt="" />
-                    </a>
-                  
-
+                    
                     <ul className="nav-item">
                         <li>
                             <Link to="/Background">
@@ -45,28 +39,11 @@ const Navigation = () => {
                                 <span>TỔNG QUAN</span>
                                 <i className="fa fa-angle-down"></i>
                             </Link>
-                            <ul className="submenu">
-                                <li><Link to="/NotFound">Giới Thiệu</Link></li>
-                                <li><Link to="/NotFound">Thư Hiệu Trưởng</Link></li>
-                                <li><Link to="/NotFound">Đến Với ISPACE</Link></li>
-                                <li><Link to="/NotFound">Hợp Tác Quốc Tế</Link></li>
-                            </ul>
+                            
+                                
+                           
                         </li>
-                        <li>
-                            <Link to="/NotFound">
-                                <span>TUYỂN SINH</span>
-                                <i className="fa fa-angle-down"></i>
-                            </Link>
-                            <ul className="submenu">
-                                <li>
-                                    <Link to="/NotFound">Tuyển Sinh 2023</Link>
-                                </li>
-                                <li>
-                                    <Link to="/NotFound">Học phí Cao đẳng chính quy</Link>
-                                </li>
-                                <li><Link to="/NotFound">Câu Hỏi Thường Gặp</Link></li>
-                            </ul>
-                        </li>
+                        
                         <li>
                             <a href="#">
                                 <span>CHƯƠNG TRÌNH ĐÀO TẠO</span>
@@ -90,20 +67,17 @@ const Navigation = () => {
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <Link to="/NotFound">
-                                <span>TIN TỨC</span>
-                                <i className="fa fa-angle-down"></i>
-                            </Link>
-                            <ul className="submenu">
-                                <li><Link to="/NotFound">Tin Tức</Link></li>
-                                <li><Link to="/NotFound">Sự Kiện</Link></li>
-                                <li><Link to="/NotFound">Mẹo Công Nghệ</Link></li>
-                            </ul>
-                        </li>
+                        
                         <li>
                             <Link to="/Dangkykhoahoc"><span>LIÊN HỆ</span></Link>
                         </li>
+
+                        <li>
+                            <Link to="/Dashboard"><span>DASHBOARD</span></Link>
+                        </li>
+                       
+
+
 
                         {/* <i className="fa-sharp fa-solid fa-magnifying-glass search-icon" id="searchIcon"></i>
                 <div className="search-box">
@@ -111,6 +85,11 @@ const Navigation = () => {
                     <input type="text" placeholder="Search here..." />
                 </div> */}
                     </ul>
+                    <div className="hamburger" onClick={toggleMenu}>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                    </div>
                 </div>
             </nav>
         </div>

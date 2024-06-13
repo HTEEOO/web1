@@ -1,4 +1,15 @@
-
+@media only screen and (max-width: 900px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .menu a {
+    display: block;
+    
+  }
+}
 
 
 
@@ -4331,12 +4342,6 @@ select {
   word-wrap: normal;
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -4398,10 +4403,7 @@ progress {
   height: auto;
 }
 
-[type="search"] {
-  outline-offset: -2px;
-  -webkit-appearance: none;
-}
+
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;

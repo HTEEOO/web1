@@ -3,67 +3,70 @@
   display: none;
 }
 
-/* Phần responsive cho hamburger và thanh nav */
-@media only screen and (max-width: 900px) {
-  /* Hiển thị hamburger khi màn hình nhỏ hơn 900px */
-  .hamburger {
-      display: block;
-      cursor: pointer;
-      padding-left: 20px;
-      z-index: 800; /* Đảm bảo hamburger hiển thị trên cùng */
-      position: absolute;
-      top: 20px;
-      left: 20px; /* Đặt vị trí bên trái của hình ảnh */
-  }
-  .navigation img {
-    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của parent */
-    height: auto; /* Duy trì tỷ lệ khung hình */
+
+.light .btn-orange {
+  background-color: rgb(217, 125, 13);
+  color: white;
 }
 
-  .menu{
-    font-size: small;
-  }
-  /* Ẩn thanh nav khi màn hình nhỏ hơn 900px */
-  .nav {
-      display: none;
+.dark .btn-orange {
+  background-color: rgb(217, 125, 13);
+  color: white;
+}
+
+/* Phần responsive cho hamburger và thanh nav */
+@media only screen and (max-width: 900px) {
+  .navigation {
+    height: 50px;
+    padding: 10px; /* Điều chỉnh padding theo nhu cầu */
+    
   }
 
-  /* Hiển thị thanh nav khi hamburger được nhấn */
-  .nav.active {
-      display: block;
-      position: absolute;
-      top: 50px; /* Thay đổi vị trí tùy thuộc vào cần thiết */
-      left: 0;
-      right: 0;
-      width: 100vw;
-      background: #7c2d12;
-      transition: 0.2s;
-      overflow: hidden;
-      z-index: 998; /* Đảm bảo thanh nav hiển thị dưới hamburger */
+  .navigation img {
+    max-width: 98%; /* Điều chỉnh kích thước hình ảnh theo nhu cầu */
   }
 
-  /* Các quy tắc CSS cho các mục trong thanh nav */
+  .hamburger {
+    display: block;
+    padding-right: 20px;     
+    position: relative; /* Thay đổi vị trí thành relative để canh đúng */
+  }  
+ 
+  .nav-item{
+    background-color: #00695C;
+    width: 100%;
+    margin-top: 170px;
+  }
+
+  .nav-item .submenu{
+    display:none;
+  }
+
   .nav ul {
-      display: block;
-      width: fit-content;
-      margin: 80px auto 0 auto;
-      text-align: center;
-      transition: 0.5s;
-      opacity: 0;
-  }
-
-  /* Hiển thị các mục trong thanh nav khi được kích hoạt */
-  .nav.active ul {
-      opacity: 1;
-  }
-
-  .nav ul li a {
-      margin-bottom: 12px;
-      color: aliceblue;
-  }
-  .chung{
+    flex-direction: column;
+    display: block;
+    transition: 0.5s;
+    opacity: 0;
+    position: absolute;
     text-align: center;
+    
   }
+  .nav ul li ul{
+    display: none;
+  }
+  .nav ul li ul li a{
+    display: none;
+  }
+
+  .nav.active ul {
+    opacity: 1;
+    
+    
+  }
+
+ 
+
+  
 }
 
 

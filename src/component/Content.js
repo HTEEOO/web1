@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Header from '../component/Header';
 import { useContext } from "react";
 import { ThemeContext } from "../App";
+import Dangky from './Dangkykhoahoc1';
 
 
 
@@ -189,73 +190,10 @@ function Content() {
                     </div>
                 </div>
 
-
+                <Dangky />
 
                 {/* Registration Start */}
-                <div className="container-fluid bg-registration py-5" style={{ margin: "10px 0", background: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/bg_ispace.jpg), no-repeat center center" }}>
-                    <div className="container py-5">
-                        <div className="row align-items-center">
-                            <div className="col-lg-7 mb-5 mb-lg-0">
-                                <div className="mb-4">
-                                    <h1 className="text-orange">
-                                        Đăng Ký Ngay</h1>
-                                    <h5
-                                        className="text-primary text-uppercase text-white mb-3"
-                                        style={{ letterSpacing: 7 }}
-                                    >
-                                        <img src="./img/nhanngay.jpg" alt="" style={{ width: '100%', height: '400px' }} />
-                                    </h5>
-
-                                </div>
-
-                            </div>
-                            <div className="col-lg-5">
-                                <div className="card border-0">
-                                    <div className="card-header bg-light text-center p-4">
-                                        <h1 className="m-0">Điền thông tin bên dưới</h1>
-                                    </div>
-                                    <div className="card-body rounded-bottom bg-orange p-5">
-                                        <form autoComplete='off' onSubmit={(e) => Submit(e)} >
-                                            <div className="form-group">
-                                                <input type="text" name="Name" className="form-control border-0 p-4" placeholder="Họ Tên Bạn*" required="required" />
-                                            </div>
-                                            <div className="form-group">
-                                                <input type="text" name="Phone" className="form-control border-0 p-4" placeholder="Số điện thoại*" required="required" />
-                                            </div>
-                                            <div className="form-group">
-                                                <input type="email" name="Email" className="form-control border-0 p-4" placeholder="Email*" required="required" />
-                                            </div>
-                                            <div className="form-group">
-                                                <select className="custom-select border-0 px-4" name="Chuongtrinh" style={{ height: 47 }} placeholder="Ngành học">
-                                                    <option selected="">--Chương trình học--</option>
-                                                    <option>An Ninh Mạng</option>
-                                                    <option>Phát Triển Phần Mềm</option>
-                                                    <option>Thiết kế đồ Họa</option>
-                                                </select>
-                                            </div>
-                                            <div className="form-group">
-                                                <select className="custom-select border-0 px-4" name="Doituong" style={{ height: 47 }} placeholder="Email của bạn">
-                                                    <option selected="">Đối Tượng Đăng Ký</option>
-                                                    <option>Học sinh đang học 12(đăng ký giữ chỗ)</option>
-                                                    <option>Học sinh tốt nghiệp THPT</option>
-                                                    <option>Sinh viên</option>
-                                                    <option>Người đi làm</option>
-                                                </select>
-                                            </div>
-
-                                            <div>
-                                                <button className="btn btn-dark btn-block border-0 py-3" onClick={handleReset} type="submit">
-                                                    Đăng ký ngay
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                
                 {/* Registration End */}
 
                 <div style={{ paddingTop: 70 }}>

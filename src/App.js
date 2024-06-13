@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import Home from './component/Home';
-import Dangkykhoahoc from './component/Dangkykhoahoc';
+import FormDK from './Dangkykhoahoc';
 import AnNinhMang from './component/AnNinhMang';
 import PhatTrienPhanMem from './component/PhatTrienPhanMem';
 import ThietKeDoHoa from './component/ThietKeDoHoa';
@@ -13,7 +13,8 @@ import NotFound from './component/NotFound';
 import Content from './component/Content';
 import Background from './component/Background';
 import React, { createContext, useState } from 'react';
-
+import Dashboard from './component/Dashboard';
+import AdminChart from './component/AdminChart';
 export const ThemeContext = createContext();
 
 function App() {
@@ -31,10 +32,12 @@ function App() {
         </div>
 
         <Routes>
+        
+          <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Background" element={<Background />} />
           <Route path="/Content" element={<Content />} />
           <Route path="/" element={<Home />} />
-          <Route path="/Dangkykhoahoc" element={<Dangkykhoahoc />} />
+          <Route path="/Dangkykhoahoc" element={<FormDK />} />
           <Route path="/AnNinhMang" element={<AnNinhMang />} />
           <Route path="/PhatTrienPhanMem" element={<PhatTrienPhanMem />} />
           <Route path="/ThietKeDoHoa" element={<ThietKeDoHoa />} />
